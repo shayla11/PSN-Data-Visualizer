@@ -1,4 +1,10 @@
-print("this will soon become something!")
+from psnawp_api import PSNAWP
 
-# this will be the develop branch, were i test the code before i push.
-# i will create different branches if i want to 'branch' off smore!
+psnawp = PSNAWP('xyz0GtvCr6Javg9MOdxDDa6rilcxvfAQYjMkBDdeboefJ00IP8AslSiKMi2w5Xnk')
+
+# This is you
+client = psnawp.me()
+print(client.online_id)
+print("\n")
+print(client.get_profile_legacy()['profile']['trophySummary']['level'])
+print("\n")
